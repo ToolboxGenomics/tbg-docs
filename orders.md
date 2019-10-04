@@ -1,15 +1,13 @@
+# Customer Panel Orders
 
-
-
-# Orders
-<br><br>
-This document explains on how to create, retrieve and cancel Customer Panel Orders in your account.
-<br><br>
+Customer Panel Orders are orders for Panels for a specific Customer. This document explains on how to create, retrieve and cancel Customer Panel Orders.
+<br />
 To place a Customer Panel Order, the Customer must have an `existing Customer Shipment`.
+
 <table>
   <tr>
     <td><strong>URL</strong></td>
-    <td> /api/v1/customer-panel-order/ </td>
+    <td> /api/v1/customer-panel-orders/ </td>
   </tr>
   <tr>
     <td><strong>HTTP Method</strong></td>
