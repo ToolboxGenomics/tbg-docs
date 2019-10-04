@@ -22,7 +22,7 @@ The list of events can be found [here](https://github.com/ToolboxGenomics/tbg-do
 
 `GET partners.toolboxgenomics.com/api/v1/events/?created_at__gte=2019-10-01+00:00:00`
 
-2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes.
+2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/webhooks.md)
 
 
 ### Receiving Report Results
