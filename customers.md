@@ -59,7 +59,7 @@ This document explains on how to create and retrieve customers in your account.
 
 ```
 POST /api/v1/customers/
-Host: staging-app.toolboxgenomics.com
+Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
 Payload:
@@ -146,7 +146,7 @@ You can get order details using this API Access Point.
 
 ```
 GET /api/v1/customers/319/
-Host: staging-app.toolboxgenomics.com
+Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
 ```
@@ -214,7 +214,7 @@ You can get all your customers using this API endpoint.
 
 ```
 GET api/v1/customers/
-Host: staging-app.toolboxgenomics.com
+Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
 ```
