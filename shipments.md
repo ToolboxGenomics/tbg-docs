@@ -20,7 +20,7 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 
 #### Example Request
 
-```json
+```
 POST partners.toolboxgenomics.com/api/v1/customer-shipments/ 
 Content-Type: application/json
 
@@ -45,7 +45,7 @@ Payload:
 
 #### Example Response
 
-```json
+```
 HTTP/1.0 201 OK 
 Content-Type: application/json
 
