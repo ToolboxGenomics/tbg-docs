@@ -16,7 +16,7 @@ The API uses JSON Web Tokens for authentication.
 
 ### Receiving Event Updates from Toolbox Genomics
 
-To receive event notifications from the Toolbox Genomics API, there are 2 options:
+The list of events can be found [here](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/events.md). To receive event notifications from the Toolbox Genomics API, there are 2 options:
 
 1. Polling - To check for new events periodically, the Event List API endpoint can be used with a timestamp filter so that only specific events can be retrieved based on the date/time specified. For example, to retrieve the events for October 1, 2019 12am UTC onwards, the following API request can be performed:
 
