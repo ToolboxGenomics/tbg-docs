@@ -26,6 +26,9 @@ To receive event notifications from the Toolbox Genomics API, there are 2 option
 2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes.
 
 
+### Receiving Report Results
+_To Follow_
+
 ### Response Codes
 
 We use conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, invalid syntax, etc.), and codes in the 5xx range indicate a server error.
