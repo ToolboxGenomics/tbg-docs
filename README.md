@@ -9,7 +9,7 @@ The API uses JSON Web Tokens for authentication.
 
 ### Steps to Place an Order for Kits and Panels for a Customer.
 
-1. Create a Customer. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/customers.md)
+1. Create a customer record. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/customers.md)
 2. Create a shipment request for a kit. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/shipments.md)
 3. Create a panel order. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/orders.md)
 
