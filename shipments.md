@@ -32,7 +32,7 @@ Payload:
       "line_2": "Suite 300",
       "city": "Walnut Creek",
       "state": "CA",
-      "postal_code": "94597"
+      "postal_code": "94597",
       "country: "US"
     },
     "recipient_phone": "(415)722-4393",
@@ -58,7 +58,7 @@ Content-Type: application/json
     "line_2": "Suite 300",
     "city": "Walnut Creek",
     "state": "CA",
-    "postal_code": "94597"
+    "postal_code": "94597",
     "country: "US"
   },
   "recipient_phone": "(415)722-4393",
