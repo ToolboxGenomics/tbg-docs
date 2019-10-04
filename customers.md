@@ -1,14 +1,11 @@
 
 # Customer
-For testing purposes, please use `https://staging-api.toolboxgenomics.com/` to create, retrieve and cancel orders.<br>
-For example: `https://staging-api.toolboxgenomics.com/orders/`
+For testing purposes, please use `https://staging-app.toolboxgenomics.com/` to create, retrieve and cancel orders.<br>
+For example: `https://staging-app.toolboxgenomics.com/orders/`
 <br><br>
-This document explains on how to create, retrieve and cancel customers in your account.
+This document explains on how to create and retrieve customers in your account.
 <br><br>
-For more information about the parameters and response in creating customer, click <a href=here</a>.
-## Creating Customers
 
-### API Access Points
 
 <table>
   <tr>
@@ -150,7 +147,7 @@ You can get order details using this API Access Point.
 ##### Request
 
 ```
-GET /orders/320/
+GET /orders/319/
 Host: staging-app.toolboxgenomics.com
 Content-Type: application/json
 
@@ -179,8 +176,8 @@ Content-Type: application/json
 }
 ```
 
-#### Retrieve ALL customers details
-You can get all your customers using this API Access Point.
+#### Retrieve ALL customers
+You can get all your customers using this API endpoint.
 <table>
   <tr>
     <td><strong>URL</strong></td>
