@@ -2,7 +2,7 @@
 Customers are persons who will be receiving personalized reports based on their DNA.
  
 ### Create a Customer
-Submit customer details. This should be done prior to creating a Client Panel Order.
+Submit customer details. This should be done prior to creating a Customer Shipment.
 <table>
   <tr>
     <td><strong>URL</strong></td>
