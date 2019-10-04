@@ -98,8 +98,8 @@ Content-Type: application/json
 This section describes how to retrieve all customer shipments.
 
 ### API Access Points
-#### Retrieve order details
-You can get order details using this API Access Point.
+#### Retrieve Customer Shipment details
+You can get Customer Shipment details using this API Access Point.
 <table>
   <tr>
     <td><strong>URL</strong></td>
