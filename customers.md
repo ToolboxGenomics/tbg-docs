@@ -1,23 +1,23 @@
 # Customer
 Customers are persons who will be receiving personalized reports based on their DNA.
  
-## Create a Customer
+### Create a Customer
 Submit customer details. This should be done prior to creating a Customer Shipment.
 
-### POST `/api/v1/customers`
+#### POST `/api/v1/customers`
 
 | Attribute Name | Data Type | Description                     |
 |----------------|-----------|---------------------------------|
-| reference_id | string | Any unique identifier/code for the customer |
 | first_name | string | The first name that will be displayed on the customer's report |
 | last_name | string | The last name that will be displayed on the customer's report |
+| reference_id | string | (optional) The id that will be displayed on the customer's report |
 | email | string | (optional) |
 | date_of_birth | string | (optional) The date of birth of the customer in standard ISO 8601 format 'YYYY-MM-DD' |
 | consent_date | string | (optional) The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD' |
-| gender | string | (optional) choices: male, female |
-| ethnicity | list of strings | (optional) choices: asian, caucasian, latino, black |
-| caffeine_consumption | string | (optional) choices: yes, no |
-| diet | list of strings| (optional) choices: no_meat, no_gluten, no_dairy, only_fish |
+| gender | string | (optional) The sex of the customer assigned at birth. The choices are: `male`, `female` |
+| ethnicity | list of strings | (optional) The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `black` |
+| caffeine_consumption | string | (optional) Whether or not the customer consumes caffeine. The choices are: `yes`, `no` |
+| diet | list of strings| (optional) choices: Any special diet of the customer. The choices are: `no_meat`, `no_gluten`, `no_dairy`, `only_fish` |
 
 
 #### Example Request
@@ -46,7 +46,7 @@ Body:
 HTTP/1.0 201 OK
 
 Content-Type: application/json
-
+Body:
 {
   "id": 319,
   "created_at": "2017-11-24 10:00:00",
