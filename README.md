@@ -38,7 +38,8 @@ There are two types of errors returned by the API server in the bodies of 4xx an
 
 ### Dates
 
-Our API uses the ISO8601 date format for complete date plus hours, minutes, seconds and timezone offset.         ```
+Our API uses the ISO8601 date format for complete date plus hours, minutes, seconds and timezone offset.         
+```
          yyyy-MM-dd'T'HH:mm:ssZ`
 For UTC: 2015-11-03T13:21:58+00:00
 ```
