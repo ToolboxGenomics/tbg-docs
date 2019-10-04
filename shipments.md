@@ -1,60 +1,27 @@
 
-# Shipments
-<br><br>
-This document explains on how to create, retrieve and cancel shipments in your account.
-<br><br>
+# Customer Shipments
+Customer Shipments are orders submitted to Toolbox Genomics wherein one or more DNA Collection Kits are requested to be shipped directly to a `Customer`. This document explains how to create, retrieve, and cancel customer shipments.
 
-<table>
-  <tr>
-    <td><strong>URL</strong></td>
-    <td> /api/v1/customer-shipments/ </td>
-  </tr>
-  <tr>
-    <td><strong>HTTP Method</strong></td>
-    <td> POST </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Parameters</strong></td>
-    <td>
-      <ul>
-        <li><code>recipient_address</code> [String]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Response</strong></td>
-    <td>
-      <ul>
-        <li><code>id</code> [Number/Integer]</li>
-        <li><code>created_at</code> [String]</li
-        <li><code>recipient_address</code> [String]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
-        <li><code>status</code> [String]</li>
-        <li><code>tracking_number</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<br>
+
+## Create a Customer Shipment
+
+### POST `/api/v1/customer-shipments/`
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| recipient_address | Address | The destination of the shipment.
+| recipient_phone | string |
+| sku | string | The SKU of the DNA Collection Kit for shipment.
+| quantity | integer | The quantity of the item for shipment.
+| is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
 
 
-#### Example
-
-###### Request
+##### Example Request
 
 ```
-POST /api/v1/customer-shipments/
-Host: staging.partners.toolboxgenomics.com
+POST partners.toolboxgenomics.com/api/v1/customer-shipments/ 
 Content-Type: application/json
 
 Payload:
@@ -70,7 +37,7 @@ Payload:
 
 ```
 
-###### Success Response
+##### Example Response
 
 ```
 HTTP/1.0 201 OK 
