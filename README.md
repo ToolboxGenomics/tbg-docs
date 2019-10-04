@@ -62,7 +62,7 @@ To receive event notifications from the Toolbox Genomics API, there are 2 option
 
 ### Steps to Create a Kit and Panel Order for a Customer
 
-1. Create a Customer. See [`customers.md`](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/customers.md)
-2. Create a Shipment. See [shipments.md](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/shipments.md)
-3. Create an Order. See [`orders.md`](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/orders.md)
+1. Create a Customer. See the [Customer endpoints](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/customers.md)
+2. Create a Shipment. See [Shipment endpoints](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/shipments.md)
+3. Create an Order. See [Order endpoints](https://github.com/ToolboxGenomics/tbg-docs/blob/update-docs/orders.md)
 
