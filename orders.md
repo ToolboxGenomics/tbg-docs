@@ -9,7 +9,7 @@ To place a Customer Panel Order, the Customer must have an `existing Customer Sh
 <table>
   <tr>
     <td><strong>URL</strong></td>
-    <td> /api/v1/customer-panel-order/ </td>
+    <td> /api/v1/customer-panel-orders/ </td>
   </tr>
   <tr>
     <td><strong>HTTP Method</strong></td>
