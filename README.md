@@ -55,7 +55,7 @@ To receive event notifications from the Toolbox Genomics API, there are 2 option
 
 1. Polling - To check for new events periodically, the Event List API endpoint can be used with a timestamp filter so that only specific events can be retrieved based on the date/time specified. For example, to retrieve the events for October 1, 2019 12am UTC onwards, the following API request can be performed:
 
-`GET partners.toolboxgenomics.com/api/v1/events/?created_at__gt=2019-10-01+00:00:00`
+`GET partners.toolboxgenomics.com/api/v1/events/?created_at__gte=2019-10-01+00:00:00`
 
 2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes.
 
