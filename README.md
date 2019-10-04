@@ -60,7 +60,7 @@ To receive event notifications from the Toolbox Genomics API, there are 2 option
 2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes.
 
 
-### Steps to Create a Order for a Customer
+### Steps to Create a Kit and Panel Order for a Customer
 
 1. Create a Customer. See `customers.md`
 2. Create a Shipment. See `shipments.md`
