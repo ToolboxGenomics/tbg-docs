@@ -5,7 +5,7 @@ Events are created when certain events occur in the life of a resource. This doc
 
 ### Event Types
 
-| Event | Event Type | Description
+| Event | Type | Description
 |:---|:---|:---
 | Kit out for delivery | kit.updated | Sent immediately when a kit is added to a shipment.
 | Kit received by lab | kit.updated | Sent when the lab receives the kit.
