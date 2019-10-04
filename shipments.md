@@ -7,7 +7,7 @@ This document explains on how to create, retrieve and cancel shipments in your a
 <table>
   <tr>
     <td><strong>URL</strong></td>
-    <td> /api/v1/customer-shipment/ </td>
+    <td> /api/v1/customer-shipments/ </td>
   </tr>
   <tr>
     <td><strong>HTTP Method</strong></td>
