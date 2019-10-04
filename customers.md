@@ -1,7 +1,5 @@
 
 # Customer
-For testing purposes, please use `https://staging-app.toolboxgenomics.com/` to create, retrieve and cancel orders.<br>
-For example: `https://staging-app.toolboxgenomics.com/orders/`
 <br><br>
 This document explains on how to create and retrieve customers in your account.
 <br><br>
@@ -88,7 +86,7 @@ Content-Type: application/json
 
 {
   "id": 319,
-  "created_at": "2017-11-24",
+  "created_at": "2017-11-24 10:00:00",
   "reference_id": "cs7010",
   "first_name": "Jon",
   "last_name": "Snow",
@@ -147,7 +145,7 @@ You can get order details using this API Access Point.
 ##### Request
 
 ```
-GET /orders/319/
+GET /api/v1/customers/319/
 Host: staging-app.toolboxgenomics.com
 Content-Type: application/json
 
@@ -161,7 +159,7 @@ Content-Type: application/json
 
 {
   "id": 319,
-  "created_at": "2017-11-24",
+  "created_at": "2017-11-24 10:00:00",
   "reference_id": "cs7010",
   "first_name": "Jon",
   "last_name": "Snow",
@@ -181,7 +179,7 @@ You can get all your customers using this API endpoint.
 <table>
   <tr>
     <td><strong>URL</strong></td>
-    <td> /orders/ </td>
+    <td> /api/v1/customers/ </td>
   </tr>
   <tr>
     <td><strong>HTTP Method</strong></td>
@@ -230,7 +228,7 @@ Content-Type: application/json
 [
     {
         "id": 319,
-        "created_at": "2017-11-24",
+        "created_at": "2017-11-24 10:00:00",
         "reference_id": "cs7010",
         "first_name": "Jon",
         "last_name": "Snow",
@@ -245,7 +243,7 @@ Content-Type: application/json
     },
     {
         "id": 319,
-        "created_at": "2017-11-24",
+        "created_at": "2017-11-24 10:00:00",
         "reference_id": "cs7010",
         "first_name": "Jon",
         "last_name": "Snow",
