@@ -3,6 +3,10 @@
 This doc will show you how to use our REST API to authenticate, make requests, and retrieve data. All responses to and from the API will be in JSON.
 
 
+### Authentication
+The API uses JSON Web Tokens for authentication.
+
+
 ### Response Codes
 
 We use conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, invalid syntax, etc.), and codes in the 5xx range indicate a server error.
@@ -43,3 +47,22 @@ Our API uses the ISO8601 date format for complete date plus hours, minutes, seco
          yyyy-MM-dd'T'HH:mm:ssZ`
 For UTC: 2015-11-03T13:21:58+00:00
 ```
+
+
+### Receiving Event Updates from Toolbox Genomics
+
+To receive event notifications from the Toolbox Genomics API, there are 2 options:
+
+1. Polling - To check for new events periodically, the Event List API endpoint can be used with a timestamp filter so that only specific events can be retrieved based on the date/time specified. For example, to retrieve the events for October 1, 2019 12am UTC onwards, the following API request can be performed:
+
+`GET partners.toolboxgenomics.com/api/v1/events/?created_at__gt=2019-10-01+00:00:00`
+
+2. Webhooks - Webhooks are messages sent by Toolbox Genomics via HTTPS POST to a URL you provide to us. Webhook messages are sent when certain Events occur in the life of a resource. They allow your application to receive pushed updates about a resource, rather than poll our API for status changes.
+
+
+### Steps to Create a Order for a Customer
+
+1. Create a Customer. See `customers.md`
+2. Create a Shipment. See `shipments.md`
+3. Create an Order. See `orders.md`
+
