@@ -1,4 +1,4 @@
-# Toolbox Genomics Partner API
+# Toolbox Genomics Partners API
 
 This doc will show you how to use our REST API to authenticate, make requests, and retrieve data. All responses to and from the API will be in JSON.
 
