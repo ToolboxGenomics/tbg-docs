@@ -1,8 +1,9 @@
 # Customer
 Customers are persons who will be receiving personalized reports based on their DNA.
  
-### Create a Customer
-Submit customer details. This should be done prior to creating a Customer Shipment.
+
+## Create a Customer
+Submit customer details.
 
 #### POST `/api/v1/customers`
 
@@ -21,7 +22,7 @@ Submit customer details. This should be done prior to creating a Customer Shipme
 
 
 #### Example Request
-```
+```json
 Method: POST partners.toolboxgenomics.com/api/v1/customers/
 Content-Type: application/json
 Body:
@@ -42,7 +43,7 @@ Body:
 
 #### Example Success Response
 
-```
+```json
 HTTP/1.0 201 OK
 
 Content-Type: application/json
@@ -64,7 +65,7 @@ Body:
 
 ```
 
-### Get a Customer
+## Get a Customer
 
 Retrieve details about an individual customer by customer id.
 <table>
@@ -142,7 +143,7 @@ Body:
 }
 ```
 
-#### List All Customers
+## List All Customers
 
 Retrieve details of all customers.
 <table>
