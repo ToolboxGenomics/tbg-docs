@@ -182,7 +182,7 @@ Content-Type: application/json
     {
         "id": 71,
         "created_at": "2017-11-24 10:01:00",
-        "category": "report.updated",
+        "type": "report.updated",
         "data": {
             "report": {
               "id": 1012,
