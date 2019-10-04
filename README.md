@@ -11,7 +11,7 @@ The API uses JSON Web Tokens for authentication.
 
 1. Add a customer record. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/master/customers.md)
 2. Request for a kit to be shipped to the client. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/master/shipments.md)
-3. Place an order for reports. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/master/orders.md)
+3. Place an order for panels. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/master/orders.md)
 
 
 ### Receiving Event Updates from Toolbox Genomics
