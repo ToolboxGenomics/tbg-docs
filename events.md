@@ -7,7 +7,7 @@ Events are created when certain events occur in the life of a resource. This doc
 
 | Event | Type | Description
 |:---|:---|:---
-| Kit out for delivery | kit.updated | Sent immediately when a kit is added to a shipment.
+| Kit out for delivery | kit.created | Sent immediately when a kit is added to a shipment.
 | Kit received by lab | kit.updated | Sent when the lab receives the kit.
 | Kit in process | kit.updated | Sent when the lab starts the processing of the sample.
 | Kit failed | kit.updated | Sent when a replacement kit is needed.
@@ -170,7 +170,7 @@ Content-Type: application/json
     {
         "id": 70,
         "created_at": "2017-11-24 10:00:00",
-        "type": "kit.updated",
+        "type": "kit.created",
         "data": {
             "kit": {
               "barcode": "PT101010111",
