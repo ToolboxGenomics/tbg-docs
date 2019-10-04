@@ -1,35 +1,23 @@
 # Customer
 Customers are persons who will be receiving personalized reports based on their DNA.
  
-### Create a Customer
-Submit customer details. This should be done prior to creating a Client Panel Order.
-<table>
-  <tr>
-    <td><strong>URL</strong></td>
-    <td> /api/v1/customers/ </td>
-  </tr>
-  <tr>
-    <td><strong>HTTP Method</strong></td>
-    <td> POST </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Request<br />Attributes</strong></td>
-    <td>
-      <ul>
-        <li><code>reference_id</code> [String]</li>
-        <li><code>first_name</code> [String]</li>
-        <li><code>last_name</code> [String]</li>
-        <li><code>email</code> [String]</li>
-        <li><code>date_of_birth</code> [String] 'YYYY-MM-DD' </li>
-        <li><code>consent_date</code> [String] 'YYYY-MM-DD' </li>
-        <li><code>gender</code> [String] OPTIONAL</li>
-        <li><code>ethnicity</code> [List] [String] OPTIONAL</li>
-        <li><code>caffeine_consumption</code> [String] OPTIONAL</li>
-        <li><code>diet</code> [List] [String] OPTIONAL</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+## Create a Customer
+Submit customer details. This should be done prior to creating a Customer Shipment.
+
+### POST `/api/v1/customers`
+
+| Attribute Name | Data Type | Description                     |
+|----------------|-----------|---------------------------------|
+| reference_id | string | Any unique identifier/code for the customer |
+| first_name | string | The first name that will be displayed on the customer's report |
+| last_name | string | The last name that will be displayed on the customer's report |
+| email | string | (optional) |
+| date_of_birth | string | (optional) The date of birth of the customer in standard ISO 8601 format 'YYYY-MM-DD' |
+| consent_date | string | (optional) The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD' |
+| gender | string | (optional) choices: male, female |
+| ethnicity | list of strings | (optional) choices: asian, caucasian, latino, black |
+| caffeine_consumption | string | (optional) choices: yes, no |
+| diet | list of strings| (optional) choices: no_meat, no_gluten, no_dairy, only_fish |
 
 
 #### Example Request
