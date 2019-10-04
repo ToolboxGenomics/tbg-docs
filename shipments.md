@@ -18,9 +18,9 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
 
 
-##### Example Request
+#### Example Request
 
-```
+```json
 POST partners.toolboxgenomics.com/api/v1/customer-shipments/ 
 Content-Type: application/json
 
@@ -37,9 +37,9 @@ Payload:
 
 ```
 
-##### Example Response
+#### Example Response
 
-```
+```json
 HTTP/1.0 201 OK 
 Content-Type: application/json
 
