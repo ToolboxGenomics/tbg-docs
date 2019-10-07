@@ -205,3 +205,51 @@ Content-Type: application/json
     },
 ]
 ```
+
+
+## Cancel a Shipment
+### POST `/api/v1/customer-shipments/{customer-shipment-id}/cancel `
+
+Cancel a specific Shipment.
+
+#### Example
+
+
+##### Request
+
+```
+GET /api/v1/customer-shipments/70/cancel/
+Host: staging.partners.toolboxgenomics.com
+Content-Type: application/json
+
+```
+
+##### Success Response
+
+```
+HTTP/1.0 200 OK 
+Content-Type: application/json
+
+
+  {
+    "id": 70,
+    "created_at": "2017-11-24 10:00:00",
+    "recipient_address": {
+      "line_1": "2950 Buskirk Avenue",
+      "line_2": "Suite 300"
+      "city": "Walnut Creek",
+      "state": "CA",
+      "postal_code": "94597"
+      "country: "US"
+    },
+    "recipient_phone": "(415)722-4393",
+    "sku": "pt-kit-1",
+    "status": "canceled",
+    "tracking_no": null
+    "quantity": 1,
+    "customer_id": 319,
+    "is_replacement": false
+    }
+
+```
+
