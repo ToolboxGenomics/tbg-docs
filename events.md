@@ -67,6 +67,6 @@ Content-Type: application/json
             "status": "report-ready"
         }
 
-    },
+    }
 ]
 ```
