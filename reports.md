@@ -13,7 +13,6 @@ List all Reports.
 | created_at | date | The datetime Shipment is created.
 | customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | panel | Object | The Panel of the Report.
-| report_files | Object | The Report Files of the Report.
 
 
 #### Example Request
@@ -69,7 +68,6 @@ Retrieve a Report.
 | created_at | date | The datetime Shipment is created.
 | customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | panel | Object | The Panel of the Report.
-| report_files | Object | The Report Files of the Report.
 
 
 #### Example Request
@@ -109,7 +107,6 @@ Retrieve the list of all Reports.
 | created_at | date | The datetime Shipment is created.
 | customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | panel | Object | The Panel of the Report.
-| report_files | Object | The Report Files of the Report.
 
 
 #### Example Request
@@ -153,34 +150,96 @@ Content-Type: application/json
 ]
 ```
 
-## List a Report's Report Files
-### GET `/api/v1/report-files/?report_id={report-id}`
 
-List a Report's Report Files. Only Reports with `report-ready` status will have Report Files
+## list Report Files
+### GET `/api/v1/report-files/`
+
 
 | Attribute Name | Data Type | Description
 |:---|:---|:---
-| id | integer| System generated `id` of Toolbox Genomics API after Order creation.
-| report_id | integer| System generated `id` of the Report.
-| created_at | date | The datetime Shipment is created.
-| category | string| The category of the Report File, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
-| download_link | URL | The link where the file can be downloaded.
+| id | integer| system generated `id` of toolbox genomics api after order creation.
+| report_id | integer| system generated `id` of the report.
+| created_at | date | the datetime shipment is created.
+| category | string| the category of the report file, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
+| download_link | url | the link where the file can be downloaded.
 
 
-#### Example Request
-
-```
-GET /api/v1/report-files/?report_id=70
-Host: staging.partners.toolboxgenomics.com
-Content-Type: application/json
+#### example request
 
 ```
-
-#### Example Response
+GET /api/v1/report-files/
+host: staging.partners.toolboxgenomics.com
+content-type: application/json
 
 ```
-HTTP/1.0 200 OK 
-Content-Type: application/json
+
+#### example response
+
+```
+http/1.0 200 ok 
+content-type: application/json
+[
+  {
+    "id": 1,
+    "report_id": 70,
+    "created_at": "2017-11-30 10:00:00",
+    "category": "health-action-plan",
+    "download_link: "https://staging.partners.toolboxgenomics.com/report-files/1/download/"
+  },
+  {
+    "id": 2,
+    "report_id": 70,
+    "created_at": "2017-11-30 10:00:00",
+    "category": "practitioner-summary",
+    "download_link: "https://staging.partners.toolboxgenomics.com/report-files/2/download/"
+  },
+  {
+    "id": 3,
+    "report_id": 71,
+    "created_at": "2017-11-30 10:00:00",
+    "category": "health-action-plan",
+    "download_link: "https://staging.partners.toolboxgenomics.com/report-files/3/download/"
+  },
+  {
+    "id": 4,
+    "report_id": 71,
+    "created_at": "2017-11-30 10:00:00",
+    "category": "practitioner-summary",
+    "download_link: "https://staging.partners.toolboxgenomics.com/report-files/4/download/"
+  },
+]
+```
+
+<br />
+
+## list a report's report files
+### get `/api/v1/report-files/?report_id={report-id}`
+
+list a report's report files. only reports with `report-ready` status will have report files
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | integer| system generated `id` of toolbox genomics api after order creation.
+| report_id | integer| system generated `id` of the report.
+| created_at | date | the datetime shipment is created.
+| category | string| the category of the report file, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
+| download_link | url | the link where the file can be downloaded.
+
+
+#### example request
+
+```
+get /api/v1/report-files/?report_id=70
+host: staging.partners.toolboxgenomics.com
+content-type: application/json
+
+```
+
+#### example response
+
+```
+http/1.0 200 ok 
+content-type: application/json
 [
   {
     "id": 1,
@@ -197,6 +256,46 @@ Content-Type: application/json
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/4/download/"
   },
 ]
+```
+
+<br />
+
+
+## Retrieve a Report File
+### get `/api/v1/report-files/{report-files-id}`
+
+Retrieve a Report File.
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | integer| system generated `id` of toolbox genomics api after order creation.
+| report_id | integer| system generated `id` of the report.
+| created_at | date | the datetime shipment is created.
+| category | string| the category of the report file, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
+| download_link | url | the link where the file can be downloaded.
+
+
+#### example request
+
+```
+GET /api/v1/report-files/1/
+host: staging.partners.toolboxgenomics.com
+content-type: application/json
+
+```
+
+#### example response
+
+```
+http/1.0 200 ok 
+content-type: application/json
+{
+  "id": 1,
+  "report_id": 70,
+  "created_at": "2017-11-30 10:00:00",
+  "category": "health-action-plan",
+  "download_link: "https://staging.partners.toolboxgenomics.com/report-files/3/download/"
+}
 ```
 
 <br />
