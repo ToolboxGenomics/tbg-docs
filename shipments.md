@@ -1,76 +1,49 @@
 
-# Shipments
-<br><br>
-This document explains on how to create, retrieve and cancel shipments in your account.
-<br><br>
+# Customer Shipments
+Customer Shipments are orders submitted to Toolbox Genomics wherein one or more DNA Collection Kits are requested to be shipped directly to a `Customer`. This document explains how to create, retrieve, and cancel customer shipments.
 
-<table>
-  <tr>
-    <td><strong>URL</strong></td>
-    <td> /api/v1/customer-shipment/ </td>
-  </tr>
-  <tr>
-    <td><strong>HTTP Method</strong></td>
-    <td> POST </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Parameters</strong></td>
-    <td>
-      <ul>
-        <li><code>recipient_address</code> [String]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Response</strong></td>
-    <td>
-      <ul>
-        <li><code>id</code> [Number/Integer]</li>
-        <li><code>created_at</code> [String]</li
-        <li><code>recipient_address</code> [String]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
-        <li><code>status</code> [String]</li>
-        <li><code>tracking_number</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<br>
+
+## Create a Customer Shipment
+
+### POST `/api/v1/customer-shipments/`
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| recipient_address | Address | The destination of the shipment.
+| recipient_phone | string |
+| sku | string | The SKU of the DNA Collection Kit for shipment.
+| quantity | integer | The quantity of the item for shipment.
+| is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
 
 
-#### Example
-
-###### Request
+#### Example Request
 
 ```
-POST /api/v1/customer-shipments/
-Host: staging.partners.toolboxgenomics.com
+POST partners.toolboxgenomics.com/api/v1/customer-shipments/ 
 Content-Type: application/json
 
 Payload:
   {
-    "recipient_address": "Winterfell",
-    "recipient_phone": "Jon",
-    "recipient_name": "Snow",
+    "customer_id": 319,
+    "recipient_address": {
+      "line_1": "2950 Buskirk Avenue",
+      "line_2": "Suite 300",
+      "city": "Walnut Creek",
+      "state": "CA",
+      "postal_code": "94597",
+      "country: "US"
+    },
+    "recipient_phone": "(415)722-4393",
     "sku": "PT-Kit-1",
     "quantity": 1,
-    "customer_id": 319,
-    "is_replacement": False
+    "is_replacement": false
   }
 
 ```
 
-###### Success Response
+#### Example Response
 
 ```
 HTTP/1.0 201 OK 
@@ -79,27 +52,28 @@ Content-Type: application/json
 {
   "id": 70,
   "created_at": "2017-11-24 10:00:00",
-  "recipient_address": "winterfell",
-  "recipient_phone": "jon",
-  "recipient_name": "snow",
-  "sku": "pt-kit-1",
-  "status": "pending",
-  "tracking_no": null
-  "quantity": 1,
   "customer_id": 319,
+  "recipient_address": {
+    "line_1": "2950 Buskirk Avenue",
+    "line_2": "Suite 300",
+    "city": "Walnut Creek",
+    "state": "CA",
+    "postal_code": "94597",
+    "country: "US"
+  },
+  "recipient_phone": "(415)722-4393",
+  "sku": "PT-Kit-1",
+  "quantity": 1,
   "is_replacement": false
-
 }
 
 ```
 
-## Retrieving customer shipments
+<br />
 
-This section describes how to retrieve all customer shipments.
+## Get a Customer Shipment
 
-### API Access Points
-#### Retrieve Customer Shipment details
-You can get Customer Shipment details using this API Access Point.
+Retrieve the details of a Customer Shipment by id.
 <table>
   <tr>
     <td><strong>URL</strong></td>
@@ -113,26 +87,22 @@ You can get Customer Shipment details using this API Access Point.
     <td valign="top"><strong>Response</strong></td>
     <td>
       <ul>
-        <li><code>id</code> [Number/Integer]</li>
+        <li><code>id</code> [Integer]</li>
         <li><code>created_at</code> [String]</li>
-        <li><code>recipient_address</code> [String]</li>
+        <li><code>customer_id</code> [Int] id of the customer</li>
+        <li><code>recipient_address</code> [Address]</li>
         <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
         <li><code>status</code> [String]</li>
         <li><code>tracking_number</code> [String]</li>
         <li><code>sku</code> [String] </li>
         <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
         <li><code>is_replacement</code> [Bool]</li>
       </ul>
     </td>
   </tr>
 </table>
 
-#### Example
-
-
-##### Request
+#### Example Request
 
 ```
 GET /api/v1/customer-shipments/70/
@@ -141,7 +111,7 @@ Content-Type: application/json
 
 ```
 
-##### Success Response
+#### Example Response
 
 ```
 HTTP/1.0 200 OK 
@@ -150,9 +120,15 @@ Content-Type: application/json
 {
   "id": 70,
   "created_at": "2017-11-24 10:00:00",
-  "recipient_address": "Winterfell",
-  "recipient_phone": "Jon",
-  "recipient_name": "Snow",
+  "recipient_address": {
+    "line_1": "2950 Buskirk Avenue",
+    "line_2": "Suite 300",
+    "city": "Walnut Creek",
+    "state": "CA",
+    "postal_code": "94597"
+    "country: "US"
+  },
+  "recipient_phone": "(415)722-4393",
   "sku": "PT-Kit-1",
   "status": "PENDING",
   "tracking_no": null
@@ -163,8 +139,11 @@ Content-Type: application/json
 }
 ```
 
-#### Retrieve all Customer Shipments
-You can get all your Customer Shipments using this API Access Point.
+<br />
+## List all Customer Shipments
+
+Retrieve the list of all Customer Shipments.
+
 <table>
   <tr>
     <td><strong>URL</strong></td>
@@ -179,16 +158,15 @@ You can get all your Customer Shipments using this API Access Point.
     <td>
     List of Customer Shipments with the following details:
       <ul>
-        <li><code>id</code> [Number/Integer]</li>
+        <li><code>id</code> [Integer]</li>
         <li><code>created_at</code> [String]</li
-        <li><code>recipient_address</code> [String]</li>
+        <li><code>customer_id</code> [Int] id of the customer</li>
+        <li><code>recipient_address</code> [Address]</li>
         <li><code>recipient_phone</code> [String]</li>
-        <li><code>recipient_name</code> [String]</li>
         <li><code>status</code> [String]</li>
         <li><code>tracking_number</code> [String]</li>
         <li><code>sku</code> [String] </li>
         <li><code>quantity</code> [Int] </li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
         <li><code>is_replacement</code> [Bool]</li>
       </ul>
     </td>
@@ -217,9 +195,15 @@ Content-Type: application/json
     {
       "id": 70,
       "created_at": "2017-11-24 10:00:00",
-      "recipient_address": "winterfell",
-      "recipient_phone": "jon",
-      "recipient_name": "snow",
+      "recipient_address": {
+        "line_1": "2950 Buskirk Avenue",
+        "line_2": "Suite 300",
+        "city": "Walnut Creek",
+        "state": "CA",
+        "postal_code": "94597"
+        "country: "US"
+      },
+      "recipient_phone": "(415)722-4393",
       "sku": "pt-kit-1",
       "status": "pending",
       "tracking_no": null
@@ -230,9 +214,15 @@ Content-Type: application/json
     {
       "id": 71,
       "created_at": "2017-11-24 10:01:00",
-      "recipient_address": "Winterfell",
-      "recipient_phone": "Nancy Jewel",
-      "recipient_name": "McDonie",
+      "recipient_address": {
+        "line_1": "2950 Buskirk Avenue",
+        "line_2": "Suite 300",
+        "city": "Walnut Creek",
+        "state": "CA",
+        "postal_code": "94597"
+        "country: "US"
+      },
+      "recipient_phone": "(415)722-4393",
       "sku": "pt-kit-1",
       "status": "pending",
       "tracking_no": null
