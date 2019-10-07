@@ -55,7 +55,7 @@ There are two types of errors returned by the API server in the bodies of 4xx an
       "Field-specific error message, e.g., field_name is not a valid email address."
     ]
   },
-  "messages": [
+  "non-field-errors": [
     "General error message."
   ]
 }
