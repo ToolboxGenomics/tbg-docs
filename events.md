@@ -29,7 +29,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "status": "KIT_SHIPPED",
       "shipment_id": 2344
     }
-  } 
+  }
 }
 ```
 
@@ -43,7 +43,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "barcode": "UL42345",
       "status": "KIT_RECEIVED",
     }
-  } 
+  }
 }
 ```
 
@@ -57,7 +57,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "barcode": "UL42345",
       "status": "KIT_PROCESSING",
     }
-  } 
+  }
 }
 ```
 
@@ -72,7 +72,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "status": "KIT_FAILED",
       "reason": "Not enough DNA was extracted."
     }
-  } 
+  }
 }
 ```
 
@@ -86,7 +86,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "id": 345345,
       "status": "AVAILABLE",
     }
-  } 
+  }
 }
 ```
 
@@ -101,7 +101,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "status": "BLOCKED",
       "reason": "Customer consent date is not found."
     }
-  } 
+  }
 }
 ```
 
@@ -116,7 +116,7 @@ Events are created when certain events occur in the life of a resource. This doc
       "status": "BLOCKED",
       "reason": "Kit registration verification date is not found."
     }
-  } 
+  }
 }
 ```
 

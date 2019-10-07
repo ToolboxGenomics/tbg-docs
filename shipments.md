@@ -21,7 +21,7 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 #### Example Request
 
 ```
-POST partners.toolboxgenomics.com/api/v1/customer-shipments/ 
+POST partners.toolboxgenomics.com/api/v1/customer-shipments/
 Content-Type: application/json
 
 Payload:
@@ -72,35 +72,21 @@ Content-Type: application/json
 <br />
 
 ## Get a Customer Shipment
+### GET `/api/v1/customer-shipment/{customer-shipment-id}`
 
 Retrieve the details of a Customer Shipment by id.
-<table>
-  <tr>
-    <td><strong>URL</strong></td>
-    <td> /api/v1/customer-shipment/{customer-shipment-id} </td>
-  </tr>
-  <tr>
-    <td><strong>HTTP Method</strong></td>
-    <td> GET </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Response</strong></td>
-    <td>
-      <ul>
-        <li><code>id</code> [Integer]</li>
-        <li><code>created_at</code> [String]</li>
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>recipient_address</code> [Address]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>status</code> [String]</li>
-        <li><code>tracking_number</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
+| created_at | date | The datetime Shipment is created.
+| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| recipient_address | Address | The destination of the shipment.
+| recipient_phone | string |
+| sku | string | The SKU of the DNA Collection Kit for shipment.
+| quantity | integer | The quantity of the item for shipment.
+| is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
+| status | string | status of the shipment.
+| tracking_no | string | tracking number of the shipment.
 
 #### Example Request
 
@@ -140,38 +126,24 @@ Content-Type: application/json
 ```
 
 <br />
+
 ## List all Customer Shipments
+### GET `/api/v1/customer-shipments/ `
 
 Retrieve the list of all Customer Shipments.
 
-<table>
-  <tr>
-    <td><strong>URL</strong></td>
-    <td> /api/v1/customer-shipments/ </td>
-  </tr>
-  <tr>
-    <td><strong>HTTP Method</strong></td>
-    <td> GET </td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Response</strong></td>
-    <td>
-    List of Customer Shipments with the following details:
-      <ul>
-        <li><code>id</code> [Integer]</li>
-        <li><code>created_at</code> [String]</li
-        <li><code>customer_id</code> [Int] id of the customer</li>
-        <li><code>recipient_address</code> [Address]</li>
-        <li><code>recipient_phone</code> [String]</li>
-        <li><code>status</code> [String]</li>
-        <li><code>tracking_number</code> [String]</li>
-        <li><code>sku</code> [String] </li>
-        <li><code>quantity</code> [Int] </li>
-        <li><code>is_replacement</code> [Bool]</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
+| created_at | date | The datetime Shipment is created.
+| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| recipient_address | Address | The destination of the shipment.
+| recipient_phone | string |
+| sku | string | The SKU of the DNA Collection Kit for shipment.
+| quantity | integer | The quantity of the item for shipment.
+| is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
+| status | string | status of the shipment.
+| tracking_no | string | tracking number of the shipment.
 
 #### Example
 
