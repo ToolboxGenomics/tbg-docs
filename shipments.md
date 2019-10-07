@@ -73,6 +73,7 @@ Content-Type: application/json
 
 ## Get a Customer Shipment
 ### GET `/api/v1/customer-shipment/{customer-shipment-id}`
+
 Retrieve the details of a Customer Shipment by id.
 | Attribute Name | Data Type | Description
 |:---|:---|:---
@@ -125,8 +126,10 @@ Content-Type: application/json
 ```
 
 <br />
+
 ## List all Customer Shipments
 ### GET `/api/v1/customer-shipments/ `
+
 Retrieve the list of all Customer Shipments.
 
 | Attribute Name | Data Type | Description
