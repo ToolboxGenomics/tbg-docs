@@ -151,7 +151,7 @@ Retrieve details of all customers.
 | consent_date | string | The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD'
 | gender | string | The sex of the customer assigned at birth. The choices are: `male`, `female`
 | ethnicity | list of strings | The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `black`
-| caffeine_consumption | string | Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
+| caffeine_consumption | Boolean | Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
 | diet | list of strings| Any special diet of the customer. The choices are: `no_meat`, `no_gluten`, `no_dairy`, `only_fish`
 
 
