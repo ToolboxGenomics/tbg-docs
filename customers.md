@@ -17,9 +17,9 @@ Submit customer details.
 | email | string | _(optional)_
 | date_of_birth | string | _(optional)_ The date of birth of the customer in standard ISO 8601 format 'YYYY-MM-DD'
 | consent_date | string | _(optional)_ The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD'
-| gender | string | _(optional)_ The sex of the customer assigned at birth. The choices are: `male`, `female`
+| sex | string | _(optional)_ The sex of the customer assigned at birth. The choices are: `male`, `female`
 | ethnicity | list of strings | _(optional)_ The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `black`
-| caffeine_consumption | string | _(optional)_ Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
+| caffeine_consumption | Boolean | _(optional)_ Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
 | diet | list of strings| _(optional)_ Any special diet of the customer. The choices are: `no_meat`, `no_gluten`, `no_dairy`, `only_fish`
 
 
@@ -35,9 +35,9 @@ Body:
     "email": "jon.snow@winterfell.com",
     "date_of_birth": "1996-01-28",
     "consent_date": "2019-10-01",
-    "gender": "male",
+    "sex": "male",
     "ethnicity": ["asian", "african"],
-    "caffeine_consumption": "yes",
+    "caffeine_consumption": true,
     "diet": ["no_meat", "no_gluten"]
   }
 
@@ -59,9 +59,9 @@ Body:
   "email": "jon.snow@winterfell.com",
   "date_of_birth": "1996-01-28",
   "consent_date": "2019-10-01",
-  "gender": "male",
+  "sex": "male",
   "ethnicity": ["asian", "african"],
-  "caffeine_consumption": "yes",
+  "caffeine_consumption": true,
   "diet": ["no_meat", "no_gluten"]
 }
 
@@ -83,7 +83,7 @@ Retrieve details about an individual customer by customer id.
 | email | string | Email of the customer
 | date_of_birth | string | The date of birth of the customer in standard ISO 8601 format 'YYYY-MM-DD'
 | consent_date | string | The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD'
-| gender | string | The sex of the customer assigned at birth. The choices are: `male`, `female`
+| sex | string | The sex of the customer assigned at birth. The choices are: `male`, `female`
 | ethnicity | list of strings | The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `black`
 | caffeine_consumption | string | Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
 | diet | list of strings| Any special diet of the customer. The choices are: `no_meat`, `no_gluten`, `no_dairy`, `only_fish`
@@ -103,9 +103,9 @@ Body:
   "email": "jon.snow@winterfell.com",
   "date_of_birth": "1996-01-28",
   "consent_date": "2019-10-01",
-  "gender": "Male",
+  "sex": "Male",
   "ethnicity": ["asian", "african"],
-  "caffeine_consumption": "Yes",
+  "caffeine_consumption": true,
   "diet": ["no_meat", "no_gluten"]
 }
 ```
