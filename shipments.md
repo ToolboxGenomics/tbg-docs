@@ -15,8 +15,9 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 | recipient_phone | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
+| notes | string | Delivery notes.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
-
+ 
 
 #### Example Request
 
@@ -86,6 +87,7 @@ Retrieve the details of a Customer Shipment by id.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
 | status | string | status of the shipment.
+| notes | string | Delivery notes.
 | tracking_no | string | tracking number of the shipment.
 
 #### Example Request
@@ -143,6 +145,7 @@ Retrieve the list of all Customer Shipments.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
 | status | string | status of the shipment.
+| notes | string | Delivery notes.
 | tracking_no | string | tracking number of the shipment.
 
 #### Example
