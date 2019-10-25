@@ -4,7 +4,7 @@ This doc will show you how to use our REST API to authenticate, make requests, a
 
 
 ### Authentication
-The API uses JSON Web Tokens for authentication.
+The API uses JSON Web Tokens for authentication. [View documentation](https://github.com/ToolboxGenomics/tbg-docs/blob/master/tokens.md)
 
 
 ### Steps to Place an Order for Kits and Panels for a Client.
