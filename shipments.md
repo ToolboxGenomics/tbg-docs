@@ -10,7 +10,8 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 
 | Attribute Name | Data Type | Description
 |:---|:---|:---
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
@@ -27,7 +28,7 @@ Content-Type: application/json
 
 Payload:
   {
-    "customer_id": 319,
+    "customer": 319,
     "recipient_address": {
       "line_1": "2950 Buskirk Avenue",
       "line_2": "Suite 300",
@@ -53,7 +54,7 @@ Content-Type: application/json
 {
   "id": 70,
   "created_at": "2017-11-24 10:00:00",
-  "customer_id": 319,
+  "customer": 319,
   "recipient_address": {
     "line_1": "2950 Buskirk Avenue",
     "line_2": "Suite 300",
@@ -80,7 +81,7 @@ Retrieve the details of a Customer Shipment by id.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
 | created_at | date | The datetime Shipment is created.
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
@@ -121,7 +122,7 @@ Content-Type: application/json
   "status": "PENDING",
   "tracking_no": null
   "quantity": 1,
-  "customer_id": 319,
+  "customer": 319,
   "is_replacement": False
 
 }
@@ -138,7 +139,7 @@ Retrieve the list of all Customer Shipments.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
 | created_at | date | The datetime Shipment is created.
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
@@ -183,7 +184,7 @@ Content-Type: application/json
       "status": "pending",
       "tracking_no": null
       "quantity": 1,
-      "customer_id": 319,
+      "customer": 319,
       "is_replacement": false
     },
     {
