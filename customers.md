@@ -18,7 +18,7 @@ Submit customer details.
 | date_of_birth | string | _(optional)_ The date of birth of the customer in standard ISO 8601 format 'YYYY-MM-DD'
 | consent_date | string | _(optional)_ The date when the the customer provided his/her legal consent in standard ISO 8601 format 'YYYY-MM-DD'
 | sex | string | _(optional)_ The sex of the customer assigned at birth. The choices are: `male`, `female`
-| ethnicity | list of strings | _(optional)_ The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `black`
+| ethnicity | list of strings | _(optional)_ The ethnicty of the customer. The choices are: `asian`, `caucasian`, `latino`, `african`
 | caffeine_consumption | Boolean | _(optional)_ Whether or not the customer consumes caffeine. The choices are: `yes`, `no`
 | diet | list of strings| _(optional)_ Any special diet of the customer. The choices are: `no_meat`, `no_gluten`, `no_dairy`, `only_fish`
 
