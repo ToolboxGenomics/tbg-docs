@@ -14,6 +14,7 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
+| recipient_name | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
 | notes | string | Delivery notes.
@@ -38,6 +39,7 @@ Payload:
       "country: "US"
     },
     "recipient_phone": "(415)722-4393",
+    "recipient_name": "Jon Snow",
     "sku": "PT-Kit-1",
     "quantity": 1,
     "is_replacement": false
@@ -64,6 +66,7 @@ Content-Type: application/json
     "country: "US"
   },
   "recipient_phone": "(415)722-4393",
+  "recipient_name": "Jon Snow",
   "sku": "PT-Kit-1",
   "quantity": 1,
   "is_replacement": false
@@ -84,6 +87,7 @@ Retrieve the details of a Customer Shipment by id.
 | customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
+| recipient_name | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
@@ -118,6 +122,7 @@ Content-Type: application/json
     "country: "US"
   },
   "recipient_phone": "(415)722-4393",
+  "recipient_name": "Jon Snow",
   "sku": "PT-Kit-1",
   "status": "PENDING",
   "tracking_no": null
@@ -142,6 +147,7 @@ Retrieve the list of all Customer Shipments.
 | customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
+| recipient_name | string |
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
@@ -180,6 +186,7 @@ Content-Type: application/json
         "country: "US"
       },
       "recipient_phone": "(415)722-4393",
+      "recipient_name": "Jon Snow",
       "sku": "pt-kit-1",
       "status": "pending",
       "tracking_no": null
@@ -199,6 +206,7 @@ Content-Type: application/json
         "country: "US"
       },
       "recipient_phone": "(415)722-4393",
+      "recipient_name": "Jon Snow",
       "sku": "pt-kit-1",
       "status": "pending",
       "tracking_no": null
