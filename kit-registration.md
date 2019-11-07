@@ -14,7 +14,7 @@ Retrieve details about an individual customer by customer id.
 | customer | Customer |  The customer of the kit registration object
 | kit | Kit | The kit of the customer.
 | verification_date | string | The date when the the customer registers the kit in standard ISO 8601 format 'YYYY-MM-DD'
-
+```
 GET partners.toolboxgenomics.com/api/v1/kit-registrations/?customer=70
 Content-Type: application/json
 Response:
@@ -28,7 +28,7 @@ Response:
   "verification_date": "2019-10-01"
  }
 ]
-
+```
 ## Get a Kit Registration
 
 ### GET `/api/v1/kit-registrations/68/`
