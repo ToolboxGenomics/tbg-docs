@@ -5,7 +5,7 @@ Kit registration ensures that the right kit goes to the right customer
 
 ## Get Kit Regisration
 Retrieve details about an individual customer by customer id.
-### GET `/api/v1/kit-registrations/`
+### GET `/api/v1/customer-kit-registrations/`
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | int | Identifier of the customer.
