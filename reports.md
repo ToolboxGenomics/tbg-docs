@@ -11,8 +11,9 @@ List all Reports.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Order creation.
 | created_at | date | The datetime Shipment is created.
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
-| panel | Object | The Panel of the Report.
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| order | integer | The Order of the Report.
+| order_item | integer | The Order Item of the Report.
 
 
 #### Example Request
@@ -34,23 +35,28 @@ Content-Type: application/json
     "id": 70,
     "client_id": 319,
     "created_at": "2017-11-24 10:00:00",
-    "status": "report-ready",
-    "panel": {
-      "name": "Cardiometabolic Panel",
-      "sku": "cardiometabolic-1",
-      "description": "Description",
-    }
+    "status": "pending",
+    "customer": 2,
+    "order": 211,
+    "order_list": 3105
   },
   {
     "id": 69,
     "client_id": 320,
     "created_at": "2017-11-24 10:00:00",
     "status": "pending",
-    "panel": {
-      "name": "Hormone Panel",
-      "sku": "hormone-1",
-      "description": "Description",
-    },
+    "customer": 2,
+    "order": 211,
+    "order_list": 3106
+  },
+    {
+    "id": 68,
+    "client_id": 315,
+    "created_at": "2017-11-24 10:00:00",
+    "status": "report-ready",
+    "customer": 2,
+    "order": 211,
+    "order_list": 3106
   }
 ]
 ```
@@ -66,10 +72,9 @@ Retrieve a Report.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Order creation.
 | created_at | date | The datetime Shipment is created.
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
-| panel | Object | The Panel of the Report.
-
-
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| order | integer | The Order of the Report.
+| order_item | integer | The Order Item of the Report.
 #### Example Request
 
 ```
@@ -88,12 +93,10 @@ Content-Type: application/json
   "id": 70,
   "client_id": 319,
   "created_at": "2017-11-24 10:00:00",
-  "status": "report-ready",
-  "panel": {
-    "name": "Cardiometabolic Panel",
-    "sku": "cardiometabolic-1",
-    "description": "Description",
-  }
+  "status": "pending",
+  "customer": 2,
+  "order": 211,
+  "order_list": 3105
 }
 ```
 ## List all Reports of a Customer
@@ -105,8 +108,9 @@ Retrieve the list of all Reports.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
 | created_at | date | The datetime Shipment is created.
-| customer_id | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
-| panel | Object | The Panel of the Report.
+| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| order | integer | The Order of the Report.
+| order_item | integer | The Order Item of the Report.
 
 
 #### Example Request
