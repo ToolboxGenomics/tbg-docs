@@ -11,7 +11,6 @@ Customer Shipments are orders submitted to Toolbox Genomics wherein one or more 
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
-
 | recipient_address | Address | The destination of the shipment.
 | recipient_phone | string |
 | recipient_name | string |
