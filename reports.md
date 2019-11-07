@@ -162,7 +162,7 @@ Content-Type: application/json
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | integer| system generated `id` of toolbox genomics api after order creation.
-| report_id | integer| system generated `id` of the report.
+| report | integer| system generated `id` of the report.
 | created_at | date | the datetime shipment is created.
 | category | string| the category of the report file, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
 | download_link | url | the link where the file can be downloaded.
@@ -185,28 +185,28 @@ content-type: application/json
 [
   {
     "id": 1,
-    "report_id": 70,
+    "report": 70,
     "created_at": "2017-11-30 10:00:00",
     "category": "health-action-plan",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/1/download/"
   },
   {
     "id": 2,
-    "report_id": 70,
+    "report": 70,
     "created_at": "2017-11-30 10:00:00",
     "category": "practitioner-summary",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/2/download/"
   },
   {
     "id": 3,
-    "report_id": 71,
+    "report": 71,
     "created_at": "2017-11-30 10:00:00",
     "category": "health-action-plan",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/3/download/"
   },
   {
     "id": 4,
-    "report_id": 71,
+    "report": 71,
     "created_at": "2017-11-30 10:00:00",
     "category": "practitioner-summary",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/4/download/"
@@ -224,7 +224,7 @@ list a report's report files. only reports with `report-ready` status will have 
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | integer| system generated `id` of toolbox genomics api after order creation.
-| report_id | integer| system generated `id` of the report.
+| report | integer| system generated `id` of the report.
 | created_at | date | the datetime shipment is created.
 | category | string| the category of the report file, can be 'health-action-plan`, 'practitioner-summary', 'supplements', 'client-summary'.
 | download_link | url | the link where the file can be downloaded.
@@ -247,14 +247,14 @@ content-type: application/json
 [
   {
     "id": 1,
-    "report_id": 70,
+    "report": 70,
     "created_at": "2017-11-30 10:00:00",
     "category": "health-action-plan",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/3/download/"
   },
   {
     "id": 2,
-    "report_id": 70,
+    "report": 70,
     "created_at": "2017-11-30 10:00:00",
     "category": "practitioner-summary",
     "download_link: "https://staging.partners.toolboxgenomics.com/report-files/4/download/"
