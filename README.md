@@ -26,7 +26,7 @@ The list of events can be found [here](https://github.com/ToolboxGenomics/tbg-do
 
 
 ### Receiving Report Results
-_To Follow_
+check https://github.com/ToolboxGenomics/tbg-docs/blob/master/reports.md
 
 ### Response Codes
 
