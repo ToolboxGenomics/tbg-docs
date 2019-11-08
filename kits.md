@@ -24,7 +24,7 @@ GET /api/v1/kits/
 Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
-Payload:
+Response:
 [
   {
     "id": 65,
@@ -61,7 +61,7 @@ GET /api/v1/kits/66/
 Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
-Payload:
+Response:
 {
   "id": 66,
   "shipment": 67
