@@ -70,3 +70,13 @@ Response:
 }
 
 ```
+
+## Kit Statuses
+| Event | Status | Description
+|:---|:---|:---
+| Kit out for delivery | KIT_SHIPPED | Sent immediately when a kit is added to a shipment.
+| Kit received by lab | KIT_RECEIVED | Sent when the lab receives the kit.
+| Kit in process | SAMPLE_IN_PROCESS | Sent when the lab starts the processing of the sample.
+| Kit failed | KIT_UNUSABLE | Sent when a replacement kit is needed.
+| Kit lost | KIT_LOST | Sent when a kit got lost and replacement kit is needed.
+| Kit data ready | DATA_AVAILABLE | Sent when kit's genetic data is ready.
