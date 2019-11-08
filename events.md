@@ -139,14 +139,15 @@ Events are created when certain events occur in the life of a resource. This doc
   "id": 3520,
   "type": "report_blocked_no_consent",
   "data": {
-      "kit":
+      "report":
         {
-          "id": 1,
-          "sku": "ulta-1",
-          "barcode": "TT02010201212",
-          "shipment": 1,
-          "created_at": "2019-11-06T05:55:15.428452Z",
-          "modified_at": "2019-11-06T05:55:15.428494Z"
+          "id": 71,
+          "client_id": 319,
+          "created_at": "2017-11-24 10:00:00",
+          "status": "pending",
+          "customer": 2,
+          "order": 211,
+          "order_list": 3106
         }
   }
 }
@@ -160,12 +161,13 @@ Events are created when certain events occur in the life of a resource. This doc
   "data": {
       "report":
         {
-          "id": 1,
-          "customer": 3,
-          "order": 2,
-          "order_item": 15,
-          "created_at": "2019-11-06T05:55:15.428452Z",
-          "modified_at": "2019-11-06T05:55:15.428494Z"
+          "id": 70,
+          "client_id": 319,
+          "created_at": "2017-11-24 10:00:00",
+          "status": "pending",
+          "customer": 2,
+          "order": 211,
+          "order_list": 3105
         }
   }
 }
