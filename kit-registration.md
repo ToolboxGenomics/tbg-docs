@@ -31,7 +31,7 @@ Response:
 ```
 ## Get a Kit Registration
 
-### GET `/api/v1/kit-registrations/68/`
+### GET `/api/v1/customer-kit-registrations/68/`
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | int | Identifier of the customer.
@@ -70,7 +70,7 @@ Body:
 If your customer has registered his/her kit, patch his/her Customer Kit Registration to set the `verification_date`.
 `verification_date` must be set for the `Report` to be generated.
 
-### GET `/api/v1/kit-registrations/68/`
+### GET `/api/v1/customer-kit-registrations/68/`
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | int | Identifier of the customer.
