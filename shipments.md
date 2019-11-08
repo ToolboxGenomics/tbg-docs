@@ -90,7 +90,6 @@ Retrieve the details of a Customer Shipment by id.
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
-| status | string | status of the shipment.
 | notes | string | Delivery notes.
 | tracking_no | string | tracking number of the shipment.
 
@@ -123,7 +122,6 @@ Content-Type: application/json
   "recipient_phone": "(415)722-4393",
   "recipient_name": "Jon Snow",
   "sku": "PT-Kit-1",
-  "status": "PENDING",
   "tracking_no": null
   "quantity": 1,
   "customer": 319,
@@ -150,7 +148,6 @@ Retrieve the list of all Customer Shipments.
 | sku | string | The SKU of the DNA Collection Kit for shipment.
 | quantity | integer | The quantity of the item for shipment.
 | is_replacement | bool | Indicates whether or not the requested shipment is intended as a replacement kit for the Customer.
-| status | string | status of the shipment.
 | notes | string | Delivery notes.
 | tracking_no | string | tracking number of the shipment.
 
@@ -187,7 +184,6 @@ Content-Type: application/json
       "recipient_phone": "(415)722-4393",
       "recipient_name": "Jon Snow",
       "sku": "pt-kit-1",
-      "status": "pending",
       "tracking_no": null
       "quantity": 1,
       "customer": 319,
@@ -207,7 +203,6 @@ Content-Type: application/json
       "recipient_phone": "(415)722-4393",
       "recipient_name": "Jon Snow",
       "sku": "pt-kit-1",
-      "status": "pending",
       "tracking_no": null
       "quantity": 1,
       "customer_id": 320,
