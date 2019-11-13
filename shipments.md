@@ -79,6 +79,7 @@ Content-Type: application/json
 ### GET `/api/v1/customer-shipment/{customer-shipment-id}`
 
 Retrieve the details of a Customer Shipment by id.
+
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Shipment creation.
