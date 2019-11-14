@@ -9,7 +9,7 @@ Customer Panel Orders are orders for Panels for a specific Customer. This docume
 
 | Attribute Name | Data Type | Description
 |:---|:---|:---
-| customer_id | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | order_items | Object | Orders.
 
 #### Example
@@ -22,17 +22,17 @@ Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
 Payload:
-  {
-    "customer_id": 319,
-    "order_items": [
-      {
-          "panel_sku": "cardiometabolic-1"
-      },
-      {
-           "panel_sku": "nutri-opt-1"
-      }
-    ]
-  }
+{
+  "customer": 319,
+  "order_items": [
+    {
+        "panel_sku": "cardiometabolic-1"
+    },
+    {
+         "panel_sku": "nutri-opt-1"
+    }
+  ]
+}
 
 ```
 
@@ -45,7 +45,7 @@ Content-Type: application/json
 {
   "id": 101,
   "created_at": "2017-11-24 10:00:00",
-  "customer_id": 319,
+  "customer": 319,
   "order_items": [
       {
           "panel_sku": "cardiometabolic-1"
@@ -71,7 +71,7 @@ You can get Customer panel orders using this API Access Point.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Order creation.
 | created_at | date | The datetime Customer Panel Order is created.
-| customer_id | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | order_items | Object | Orders.
 
 
@@ -96,7 +96,7 @@ Content-Type: application/json
 {
   "id": 101,
   "created_at": "2017-11-24 10:00:00",
-  "customer_id": 319,
+  "customer": 319,
   "order_items": [
       {
           "panel_sku": "cardiometabolic-1"
@@ -118,7 +118,7 @@ You can get Customer panel orders using this API Access Point.
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Order creation.
 | created_at | date | The datetime Customer Panel Order is created.
-| customer_id | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| customer | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | order_items | Object | Order items of the order.
 
 #### Example
@@ -143,7 +143,7 @@ Content-Type: application/json
     {
         "id": 101,
         "created_at": "2017-11-24 10:00:00",
-        "customer_id": 319,
+        "customer": 319,
         "order_items": [
             {
                 "panel_sku": "cardiometabolic-1"
@@ -156,7 +156,7 @@ Content-Type: application/json
     {
         "id": 102,
         "created_at": "2017-11-24 10:01:00",
-        "customer_id": 320,
+        "customer": 320,
         "order_items": [
             {
                 "panel_sku": "weight-management-1"
