@@ -61,7 +61,7 @@ Payload:
 ###### Response
 
 ```
-GET /api/v1/trait-panels/
+GET /api/v1/raw-panels/
 Host: staging.partners.toolboxgenomics.com
 Content-Type: application/json
 
@@ -69,13 +69,13 @@ Payload:
 [
   {
     "id": 1,
-    "sku": "cardiometabolic-1"
+    "sku": "raw-panel-1"
     "is_license_required": false,
     "snps": ["rs2312", "rs39230",. . . . ]
   },
   {
-    "id": 1,
-    "sku": "detox-1"
+    "id": 2,
+    "sku": "apoe-1"
     "is_license_required": True
     "snps": ["rs2312", "rs39230",. . . . ]
   }
