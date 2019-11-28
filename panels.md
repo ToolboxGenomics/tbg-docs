@@ -82,3 +82,52 @@ Payload:
 ]
 
 ```
+
+## Get Multi Trait Panels
+### GET `/api/v1/multi-trait-panels/ `
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | Integer | ID of the panel.
+| trait_panels | | Name of the Panel.
+| sku | String | Identifier of the Panel.
+| is_license_required | Boolean | If a licensed practitioner is required for the specific Panel.
+
+#### Example
+
+###### Response
+
+```
+GET /api/v1/multi-trait-panels/
+Host: staging.partners.toolboxgenomics.com
+Content-Type: application/json
+
+Payload:
+[
+  {
+    "id": 6,
+    "sku": "health-report-1"
+    "is_license_required": false,
+    "trait_panels": [
+      {
+        7: "performance-1",
+        8: "metabolism-1",
+        9: "nutrition-1"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "sku": "health-report-2"
+    "is_license_required": false,
+    "trait_panels": [
+      {
+        10: "empower-1",
+        11: "cardiometabolic-1",
+        12: "immune-1"
+      }
+    ]
+  },
+]
+
+```
