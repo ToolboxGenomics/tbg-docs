@@ -109,11 +109,9 @@ Payload:
     "sku": "health-report-1"
     "is_license_required": false,
     "trait_panels": [
-      {
-        7: "performance-1",
-        8: "metabolism-1",
-        9: "nutrition-1"
-      }
+      {"id": 7, "sku": "performance-1"},
+      {"id": 8, "sku": "metabolism-1"},
+      {"id": 9, "sku": "nutrition-1"}
     ]
   },
   {
@@ -121,11 +119,9 @@ Payload:
     "sku": "health-report-2"
     "is_license_required": false,
     "trait_panels": [
-      {
-        10: "empower-1",
-        11: "cardiometabolic-1",
-        12: "immune-1"
-      }
+        {"id": 10, "sku": "empower-1"},
+        {"id": 11, "sku": "cardiometabolic-1"},
+        {"id": 12, "sku": "immune-1"}
     ]
   },
 ]
