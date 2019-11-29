@@ -106,8 +106,10 @@ Payload:
 [
   {
     "id": 6,
-    "sku": "health-report-1"
+    "sku": "health-report-1",
     "is_license_required": false,
+    "created_at": "2019-11-28T12:06:37.001326Z",
+    "modified_at": "2019-11-28T12:06:37.077278Z",
     "trait_panels": [
       {"id": 7, "sku": "performance-1"},
       {"id": 8, "sku": "metabolism-1"},
@@ -116,8 +118,10 @@ Payload:
   },
   {
     "id": 7,
-    "sku": "health-report-2"
+    "sku": "health-report-2",
     "is_license_required": false,
+    "created_at": "2019-11-28T12:06:37.001326Z",
+    "modified_at": "2019-11-28T12:06:37.077278Z",
     "trait_panels": [
         {"id": 10, "sku": "empower-1"},
         {"id": 11, "sku": "cardiometabolic-1"},
