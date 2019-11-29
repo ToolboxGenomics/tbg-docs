@@ -68,3 +68,10 @@ Our API uses the ISO8601 date format for complete date plus hours, minutes, seco
          yyyy-MM-dd'T'HH:mm:ssZ`
 For UTC: 2015-11-03T13:21:58+00:00
 ```
+### Pagination
+All API endpoints are paginated and includes the following data.
+```
+"count": Count of items in the page.
+"next": URL to the next page.
+"previous": URL to the previous page.
+```
