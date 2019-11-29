@@ -58,6 +58,73 @@ Content-Type: application/json
 
 ```
 
+
+## Create a Customer Panel Order with provided genetic data
+Create a Customer Panel Order and provide the genetic data.
+The report(s) will be generated from the genetic data provided.
+NOTE:
+ - We don't save the genetic data.
+ - This feature is not available for everyone.
+### POST `/api/v1/customer-panel-orders/ `
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| customer | integer| The Customer for the order.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| order_items | Object | Orders.
+| genetic_data | object | The genetic data of the patient.
+
+#### Example
+
+###### Request
+
+```
+POST /api/v1/customer-panel-orders/
+Host: staging.partners.toolboxgenomics.com
+Content-Type: application/json
+
+Payload:
+{
+  "customer": 319,
+  "order_items": [
+    {
+        "panel_sku": "cardiometabolic-1"
+    },
+    {
+         "panel_sku": "nutri-opt-1"
+    }
+  ],
+  "genetic_data": [
+    {"rsid": "rs936940", "allele": "AC"},
+    {"rsid": "1042713", "allele": "GG"}, . . . . .
+  ]
+}
+
+```
+
+###### Success Response
+
+```
+HTTP/1.0 201 OK 
+Content-Type: application/json
+
+{
+  "id": 101,
+  "created_at": "2017-11-24 10:00:00",
+  "customer": 319,
+  "order_items": [
+      {
+          "panel_sku": "cardiometabolic-1"
+      },
+      {
+           "panel_sku": "nutri-opt-1"
+      }
+  ]
+}
+
+```
+
+
+
 ## Retrieving customer panel orders
 
 This section describes how to retrieve all customer panel orders.
