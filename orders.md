@@ -65,6 +65,7 @@ The report(s) will be generated from the genetic data provided.
 NOTE:
  - We don't save the genetic data.
  - This feature is not available for everyone.
+ - Customer Shipment isn't required to place an order with provided genetic data.
 ### POST `/api/v1/customer-panel-orders/ `
 
 | Attribute Name | Data Type | Description
