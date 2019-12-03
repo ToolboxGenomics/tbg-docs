@@ -1,4 +1,4 @@
-# Customer Kit Registration
+# Customer List of Kit Registrations
 Kit registration ensures that the right kit goes to the right customer
  
 <br />
