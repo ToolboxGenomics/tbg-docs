@@ -3,6 +3,35 @@ Kit registration ensures that the right kit goes to the right customer
  
 <br />
 
+## Create Kit Regisration
+Assign a kit to a customer.
+### POST `/api/v1/customer-kit-registrations/`
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| customer | Customer | The customer of the kit.
+| kit | Kit | The kit of the customer.
+| verification_date | string | The date when the the customer registers the kit in standard ISO 8601 format 'YYYY-MM-DD'
+```
+POST partners.toolboxgenomics.com/api/v1/customer-kit-registrations/?customer=70
+Content-Type: application/json
+Payload:
+ {
+  "customer": 70,
+  "kit": "67",
+  "verification_date": null
+ }
+Response:
+ {
+  "id": 68,
+  "created_at": "2017-11-24T10:00:00+00:00",
+  "modified_at": "2017-11-24T10:00:00+00:00",
+  "customer": 70,
+  "kit": "67",
+  "verification_date": null
+ }
+```
+
+
 ## Get Kit Regisration
 Retrieve details about an individual customer by customer id.
 ### GET `/api/v1/customer-kit-registrations/`
