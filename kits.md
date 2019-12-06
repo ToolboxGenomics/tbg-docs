@@ -4,6 +4,43 @@ DNA kit of customer.
 
 <br />
 
+## Create Kit
+### POST `/api/v1/kits/ `
+
+| Attribute Name | Data Type | Description
+|:---|:---|:---
+| id | Integer | ID of the kit.
+| shipment | | The Shipment where the kit is from.
+| barcode | String | Identifier of the Panel.
+| sku | String | The SKU of the kit.
+| status | String | The current status of the kit.
+
+#### Example
+
+###### Request
+
+```
+POST /api/v1/kits/
+Host: staging.partners.toolboxgenomics.com
+Content-Type: application/json
+
+Payload:
+  {
+    "barcode": "MK1000088111"
+  }
+
+```
+
+###### Response
+
+```
+Response:
+  {
+    "barcode": "MK1000088111"
+  }
+
+```
+
 ## Get Kits
 ### GET `/api/v1/kits/ `
 
