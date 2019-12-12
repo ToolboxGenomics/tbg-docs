@@ -36,7 +36,10 @@ Payload:
 ```
 Response:
   {
-    "barcode": "MK1000088111"
+    "barcode": "MK1000088111",
+    "sku": null,
+    "shipment": null,
+    "status": null
   }
 
 ```
