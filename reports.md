@@ -10,8 +10,8 @@ List all Reports.
 | Attribute Name | Data Type | Description
 |:---|:---|:---
 | id | integer| System generated `id` of Toolbox Genomics API after Order creation.
-| created_at | date | The datetime Shipment is created.
-| customer | integer| The intended recipient of the shipment.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
+| created_at | date | The datetime Report is created.
+| customer | integer| The intended recipient of the Report.  This `id` can be obtained from the Toolbox Genomics API after Customer creation.
 | order | integer | The Order of the Report.
 | order_item | integer | The Order Item of the Report.
 
